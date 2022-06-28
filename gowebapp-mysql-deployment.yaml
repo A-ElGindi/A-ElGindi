@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gowebapp-mysql
+  labels:
+    run: gowebapp-mysql
+    tier: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: gowebapp-mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        run: gowebapp-mysql
+    spec:
+      containers:
+      - env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql
+              key: password
+        image: gcr.io/${PROJECT_ID}/gowebapp-mysql:v1
+        name: gowebapp-mysql
+        ports:
+        - containerPort: 3306
+        livenessProbe:
+          tcpSocket: 
+            port: 3306
+          initialDelaySeconds: 30
+          timeoutSeconds: 2
+        readinessProbe: 
+          tcpSocket:
+            port: 3306
+          initialDelaySeconds: 25
+          timeoutSeconds: 2
+        resources:
+          requests:
+            cpu: 20m
+            memory: 252M
+          limits:
+            cpu: 1000m
+            memory: 2G
+        #TODO add the definition for volumeMounts:
+        volumeMounts:
+        - #TODO: add mountPath as /var/lib/mysql
+        - mountPath: /var/lib/mysql
+          name: mysql
+      #TODO Configure Pods access to storage by using the claim as a volume
+      #TODO: define persistentVolumeClaim
+      #TODO: claimName is the name defined in gowebapp-mysql-pvc.yaml
+      #TODO Ref: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#claims-as-volumes
+      volumes:
+        - name: mysql
+          persistentVolumeClaim:
+            claimName: gowebapp-mysql-pvc

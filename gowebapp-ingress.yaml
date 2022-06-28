@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gowebapp-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: #TODO add the correct path
+        pathType: #TODO add the pathType appropriate for a GKE Ingress
+        backend:
+          service:
+            name: #TODO add the appropriate service name
+            port:
+              number: #TODO add the appropriate service port
