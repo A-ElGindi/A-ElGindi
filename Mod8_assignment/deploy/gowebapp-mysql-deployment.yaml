@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+#TODO: Identify the type of Object
+metadata:
+  #TODO: Give the Deployment a name "gowebapp-mysql"
+  labels:
+  #TODO: Add a label KV "run: gowebapp-mysql"
+  #TODO: give the Deployment a label: tier: backend
+spec:
+  #TODO: Define number of replicas, set it to 1
+  #TODO: Starting from Deplloyment v1 selectors are mandatory
+    #add selector KV "run: gowebapp-mysql"
+  strategy:
+    type: # Set strategy type as `Recreate`
+  template:
+    metadata:
+      #TODO: Add a label called "run" with the name of the service: "gowebapp-mysql"
+    spec:
+      containers:
+      - env:
+         - #TODO: define name as MYSQL_ROOT_PASSWORD 
+           #TODO: define value as rootpasswd
+         image: #TODO define mysql image created in previous assignment, located in gcr registry
+         name: gowebapp-mysql
+         ports:
+         #TODO: define containerPort: 3306
+         

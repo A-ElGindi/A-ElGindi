@@ -1,0 +1,22 @@
+#TODO Specify docker-compose file '3.4'
+
+services:
+  gowebapp-mysql:
+    #TODO Make a build in the `gowebapp-mysql` folder
+    #TODO Add Environment variable for MYSQL_DATABASE
+    #TODO Add healthcheck test that you can connect to Database and execute `SHOW DATABASES`
+    #TODO Add healthcheck, timeout: 45s, interval: 10s, retries: 10, start_period 15 sec
+    #TODO Reference doc for healthcheck https://docs.docker.com/compose/compose-file/compose-file-v3/#healthcheck
+    #TODO Add Restart  `always`
+    #TODO Attach to created to User-defined network `gowebapp1`
+
+  gowebapp:
+    #TODO Make a build in the appropriate folder
+    #TODO Allocate ports so that contaiener port mapped to local port
+    #TODO Restart container in case failed
+    #TODO Attach to created to User-defined network `gowebapp1`
+    #TODO Add Environment variable for GOPATH
+    #TODO Add Dependency for `gowebapp-mysql` to start first
+
+networks:
+#TODO Create User-defined network `gowebapp1` type `driver: bridge`

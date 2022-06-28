@@ -1,0 +1,4 @@
+{
+    "csharp.suppressDotnetRestoreNotification": true,
+    "redhat.telemetry.enabled": false
+}

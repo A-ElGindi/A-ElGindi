@@ -1,0 +1,14 @@
+cat <<EOF > echoserver-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echoserver
+  labels:
+    app: echoserver
+spec:
+  containers:
+  - name: echoserver
+    image: gcr.io/google_containers/echoserver:1.10
+    ports:
+    - containerPort: 8080
+EOF

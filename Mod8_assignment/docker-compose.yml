@@ -1,0 +1,30 @@
+version: '2.4'
+
+services:
+  gowebapp-mysql:
+    build: ./gowebapp-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpasswd
+    hostname: gowebapp-mysql
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=rootpasswd --execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 5s
+      retries: 30
+    networks:
+      - gowebapp1
+
+  gowebapp:
+    build: ./gowebapp
+    hostname: gowebapp
+    ports:
+      - "8080:80"
+    depends_on:
+      gowebapp-mysql:
+        condition: service_healthy
+    networks:
+      - gowebapp1
+
+networks:
+  gowebapp1:
+    driver: bridge

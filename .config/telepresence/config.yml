@@ -1,0 +1,2 @@
+daemons:
+  userDaemonBinary: /home/a_elgindi/.config/telepresence/telepresence-pro

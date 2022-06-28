@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: gowebapp-mysql-pvc
+  labels:
+    run: gowebapp-mysql
+spec:
+  #TODO Access Mode `ReadWriteOnce`
+  #TODO request 5G GCP PD Persistent Storage
+  #TODO Balanced PD CSI Storage Class 
+  #TODO GKE CSI Reference: https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gce-pd-csi-driver

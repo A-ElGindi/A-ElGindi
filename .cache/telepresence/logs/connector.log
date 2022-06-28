@@ -1,0 +1,41 @@
+2022-06-15 03:31:55.7543 info    ---
+2022-06-15 03:31:55.7544 info    Telepresence Connector v2.5.8 (api v3) starting...
+2022-06-15 03:31:55.7545 info    PID is 4723
+2022-06-15 03:31:55.7545 info    
+2022-06-15 03:31:55.7553 info    connector/server-grpc : Starting additional daemon service reverse-conn
+2022-06-15 03:31:55.7557 info    connector/server-grpc : Starting additional daemon service pro-version-checker
+2022-06-15 03:31:55.7557 info    connector/server-grpc : Currently using Telepresence Pro Version: v1.0.8
+2022-06-15 03:31:55.7557 info    connector/server-grpc : gRPC server started
+2022-06-15 03:31:55.9818 info    connector/server-grpc/conn=1 : LoginAPIKey => true
+2022-06-15 03:31:56.4888 info    connector/session : Connecting to root daemon...
+2022-06-15 03:31:56.4908 info    connector/session : Connecting to k8s cluster...
+2022-06-15 03:31:56.6132 info    connector/session : Server version v1.20.2+k3s1
+2022-06-15 03:31:56.6133 info    connector/session : Context: default
+2022-06-15 03:31:56.6133 info    connector/session : Server: https://demo-prod-824ef8f7-30f0-406d-8d7a-02fe08d7fecf.cluster.bakerstreet.io
+2022-06-15 03:31:56.6138 info    connector/session : Connected to context default (https://demo-prod-824ef8f7-30f0-406d-8d7a-02fe08d7fecf.cluster.bakerstreet.io)
+2022-06-15 03:31:56.6847 info    connector/session : Connecting to traffic manager...
+2022-06-15 03:31:57.0526 info    connector/session : No existing Traffic Manager found in namespace ambassador, installing v2.5.8...
+2022-06-15 03:32:06.6881 info    connector/session : Starting additional session service reverse-conn
+2022-06-15 03:32:06.6882 info    connector/session : Starting additional session service namespace-watcher
+2022-06-15 03:32:06.6882 info    connector/session : Starting additional session service ingress-info-connection
+2022-06-15 03:32:07.0642 info    connector/session/reverse-conn/client : Established a reverse connection to Ambassador Cloud
+2022-06-15 03:32:07.5965 info    connector/session/CreateIntercept-0 : no agent found for ReplicaSet web-app-57bc7c4959.emojivoto
+2022-06-15 03:32:07.5968 info    connector/session/CreateIntercept-0 : In ReplicaSet web-app-57bc7c4959.emojivoto, hide port "http" in container web-app from service by renaming it to "tm-http", and add traffic-agent container with image docker.io/datawire/ambassador-telepresence-agent:1.11.14.
+2022-06-15 03:32:07.5969 info    connector/session/CreateIntercept-0 : In Service web-app.emojivoto, make service port http.80 symbolic with name "http".
+2022-06-15 03:32:07.7217 info    connector/session/CreateIntercept-0 : Deleting pod web-app-57bc7c4959-p46dg.emojivoto owned by rs web-app-57bc7c4959
+2022-06-15 03:32:18.1296 info    connector/session/CreateIntercept-0 : Waiting for agent for ReplicaSet web-app-57bc7c4959.emojivoto
+2022-06-15 03:32:18.2640 info    connector/session/CreateIntercept-0 : Agent found or created for ReplicaSet web-app-57bc7c4959.emojivoto
+2022-06-15 03:32:18.8516 error   connector/session/intercept-port-forward/10.42.0.19:44015 : No mount point found for intercept "web-app-57bc7c4959-emojivoto"
+2022-06-15 05:08:08.9033 info    ---
+2022-06-15 05:08:08.9040 info    Telepresence Connector v2.6.6 (api v3) starting...
+2022-06-15 05:08:08.9040 info    PID is 4629
+2022-06-15 05:08:08.9040 info    
+2022-06-15 05:08:08.9047 info    connector/server-grpc : Starting additional daemon service reverse-conn
+2022-06-15 05:08:08.9050 info    connector/server-grpc : Starting additional daemon service pro-version-checker
+2022-06-15 05:08:08.9050 info    connector/server-grpc : Currently using Telepresence Pro Version: v1.1.6
+2022-06-15 05:08:08.9051 info    connector/server-grpc : gRPC server started
+2022-06-15 05:08:09.3787 info    connector/server-grpc/conn=1 : LoginAPIKey => true
+2022-06-15 05:08:09.6966 info    connector/session : -- Starting new session
+2022-06-15 05:08:09.6967 info    connector/session : Connecting to root daemon...
+2022-06-15 05:08:09.6976 info    connector/session : Connecting to k8s cluster...
+2022-06-15 05:08:09.6982 error   connector/session : unable to track k8s cluster: kubeconfig has no context definition

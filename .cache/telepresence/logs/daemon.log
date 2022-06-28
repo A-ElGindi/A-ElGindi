@@ -1,0 +1,76 @@
+2022-06-15 03:31:56.3881 info    ---
+2022-06-15 03:31:56.3882 info    Telepresence daemon v2.5.8 (api v3) starting...
+2022-06-15 03:31:56.3883 info    PID is 4739
+2022-06-15 03:31:56.3883 info    
+2022-06-15 03:31:56.3917 info    daemon/server-grpc : gRPC server started
+2022-06-15 03:32:06.5919 info    daemon/session : Connected to Manager 2.5.8
+2022-06-15 03:32:06.6529 info    daemon/session : Adding never-proxy subnet 35.222.188.248/32
+2022-06-15 03:32:11.6363 info    daemon/session/watch-cluster-info : Setting cluster DNS to 10.43.0.10
+2022-06-15 03:32:11.6363 info    daemon/session/watch-cluster-info : Setting cluster domain to "cluster.local."
+2022-06-15 03:32:11.6363 info    daemon/session/watch-cluster-info : Adding service subnet 10.43.0.0/16
+2022-06-15 03:32:11.6363 info    daemon/session/watch-cluster-info : Adding pod subnet 10.42.0.0/24
+2022-06-15 03:32:11.6367 info    daemon/session/dns/docker : Automatically set -dns=169.254.169.254
+2022-06-15 03:32:11.6370 info    daemon/session/watch-cluster-info : started command ["ip" "a" "add" "10.43.0.0/16" "dev" "tel0"] : dexec.pid="4757"
+2022-06-15 03:32:11.6372 info    daemon/session/watch-cluster-info :  : dexec.pid="4757" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6395 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-D" "OUTPUT" "-j" "TELEPRESENCE_DNS"] : dexec.pid="4758"
+2022-06-15 03:32:11.6403 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4758" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6405 info    daemon/session/watch-cluster-info : finished successfully: exit status 0 : dexec.pid="4757"
+2022-06-15 03:32:11.6410 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4758" dexec.stream="stdout+stderr" dexec.data="iptables v1.8.7 (legacy): Couldn't load target `TELEPRESENCE_DNS':No such file or directory\n"
+2022-06-15 03:32:11.6411 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4758" dexec.stream="stdout+stderr" dexec.data="\n"
+2022-06-15 03:32:11.6411 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4758" dexec.stream="stdout+stderr" dexec.data="Try `iptables -h' or 'iptables --help' for more information.\n"
+2022-06-15 03:32:11.6412 info    daemon/session/dns/docker/NAT-redirect : finished with error: exit status 2 : dexec.pid="4758"
+2022-06-15 03:32:11.6414 info    daemon/session/watch-cluster-info : started command ["ip" "a" "add" "10.42.0.0/24" "dev" "tel0"] : dexec.pid="4761"
+2022-06-15 03:32:11.6416 info    daemon/session/watch-cluster-info :  : dexec.pid="4761" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6417 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-F" "TELEPRESENCE_DNS"] : dexec.pid="4762"
+2022-06-15 03:32:11.6418 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4762" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6430 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4762" dexec.stream="stdout+stderr" dexec.data="iptables: No chain/target/match by that name.\n"
+2022-06-15 03:32:11.6431 info    daemon/session/dns/docker/NAT-redirect : finished with error: exit status 1 : dexec.pid="4762"
+2022-06-15 03:32:11.6436 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-X" "TELEPRESENCE_DNS"] : dexec.pid="4763"
+2022-06-15 03:32:11.6437 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4763" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6442 info    daemon/session/watch-cluster-info : finished successfully: exit status 0 : dexec.pid="4761"
+2022-06-15 03:32:11.6447 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4763" dexec.stream="stdout+stderr" dexec.data="iptables: No chain/target/match by that name.\n"
+2022-06-15 03:32:11.6453 info    daemon/session/dns/docker/NAT-redirect : finished with error: exit status 1 : dexec.pid="4763"
+2022-06-15 03:32:11.6459 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-N" "TELEPRESENCE_DNS"] : dexec.pid="4764"
+2022-06-15 03:32:11.6461 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4764" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6473 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4764"
+2022-06-15 03:32:11.6478 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "40137" "-j" "RETURN"] : dexec.pid="4765"
+2022-06-15 03:32:11.6479 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4765" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6516 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4765"
+2022-06-15 03:32:11.6522 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "54463" "-j" "RETURN"] : dexec.pid="4766"
+2022-06-15 03:32:11.6523 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4766" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6541 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4766"
+2022-06-15 03:32:11.6547 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "40327" "-j" "RETURN"] : dexec.pid="4767"
+2022-06-15 03:32:11.6549 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4767" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6571 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4767"
+2022-06-15 03:32:11.6577 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "57216" "-j" "RETURN"] : dexec.pid="4768"
+2022-06-15 03:32:11.6579 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4768" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6609 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4768"
+2022-06-15 03:32:11.6615 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "47487" "-j" "RETURN"] : dexec.pid="4769"
+2022-06-15 03:32:11.6617 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4769" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6635 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4769"
+2022-06-15 03:32:11.6665 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "39867" "-j" "RETURN"] : dexec.pid="4770"
+2022-06-15 03:32:11.6666 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4770" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6667 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4770"
+2022-06-15 03:32:11.6672 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "53386" "-j" "RETURN"] : dexec.pid="4771"
+2022-06-15 03:32:11.6678 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4771" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6692 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4771"
+2022-06-15 03:32:11.6696 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "36347" "-j" "RETURN"] : dexec.pid="4772"
+2022-06-15 03:32:11.6698 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4772" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6715 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4772"
+2022-06-15 03:32:11.6720 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "56189" "-j" "RETURN"] : dexec.pid="4773"
+2022-06-15 03:32:11.6721 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4773" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6737 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4773"
+2022-06-15 03:32:11.6741 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--source" "172.17.0.4" "--sport" "35475" "-j" "RETURN"] : dexec.pid="4774"
+2022-06-15 03:32:11.6742 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4774" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6758 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4774"
+2022-06-15 03:32:11.6767 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-A" "TELEPRESENCE_DNS" "-p" "udp" "--dest" "169.254.169.254/32" "--dport" "53" "-j" "DNAT" "--to-destination" "127.0.0.1:41650"] : dexec.pid="4775"
+2022-06-15 03:32:11.6769 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4775" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6786 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4775"
+2022-06-15 03:32:11.6790 info    daemon/session/dns/docker/NAT-redirect : started command ["iptables" "-t" "nat" "-I" "OUTPUT" "1" "-j" "TELEPRESENCE_DNS"] : dexec.pid="4776"
+2022-06-15 03:32:11.6791 info    daemon/session/dns/docker/NAT-redirect :  : dexec.pid="4776" dexec.stream="stdin" dexec.err="EOF"
+2022-06-15 03:32:11.6803 info    daemon/session/dns/docker/NAT-redirect : finished successfully: exit status 0 : dexec.pid="4776"
+2022-06-15 05:08:09.4826 info    ---
+2022-06-15 05:08:09.4850 info    Telepresence daemon v2.6.6 (api v3) starting...
+2022-06-15 05:08:09.4850 info    PID is 4647
+2022-06-15 05:08:09.4850 info    
+2022-06-15 05:08:09.4856 info    daemon/server-grpc : gRPC server started

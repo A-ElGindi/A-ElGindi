@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+#TODO: define the kind of object as Deployment
+metadata:
+  #TODO: Add a name attribute for the service as "gowebapp"
+  labels:
+    #TODO: give the Deployment a label: run: gowebapp
+    #TODO: give the Deployment a label: tier: frontend
+spec:
+  #TODO: Define number of replicas, set it to 2
+  #TODO: add selector KV "run: gowebapp"
+  template:
+    metadata:
+      labels:
+        run: gowebapp
+        tier: frontend
+    spec:
+      containers:
+      - env:
+        - #TODO: define name as MYSQL_ROOT_PASSWORD
+          #TODO: define value as rootpasswd
+        #TODO: Replace <user-name> with value you Docker-Hub ID.
+        image: #TODO define GoWebApp image created in previous assignment, located in gcr registry
+        name: gowebapp
+        ports:
+        - #TODO: define the container port as 80
