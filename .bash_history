@@ -498,3 +498,6 @@ gcloud container clusters delete k8s-scaling
 gcloud container clusters delete k8s-scaling --zone us-central1-c
 gcloud container clusters delete k8s-scaling --zone us-central1
 gcloud container clusters delete k8s-networking --zone us-central1-c
+git add .
+git commit -m "adding DOCKREFILEs and Readme"
+git push origin master
