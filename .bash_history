@@ -501,3 +501,5 @@ gcloud container clusters delete k8s-networking --zone us-central1-c
 git add .
 git commit -m "adding DOCKREFILEs and Readme"
 git push origin master
+git add .
+git commit -m "adding docker-compose.yml"
