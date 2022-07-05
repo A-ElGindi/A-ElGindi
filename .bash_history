@@ -1,12 +1,3 @@
-
-
-
-
-
-cat <<EOF | kubectl create -f -
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
   name: postgresql-pv
 spec:
   storageClassName: regionalpd-storageclass
@@ -505,3 +496,5 @@ git add .
 git commit -m "adding docker-compose.yml"
 git add .
 git commit -m "k8s manifests"
+git add .
+git commit -m "k8s manifests for Hands-on Assignment 4"
