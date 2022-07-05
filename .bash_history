@@ -503,3 +503,5 @@ git commit -m "adding DOCKREFILEs and Readme"
 git push origin master
 git add .
 git commit -m "adding docker-compose.yml"
+git add .
+git commit -m "k8s manifests"
